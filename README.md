@@ -2,22 +2,18 @@
 Mapping Australian invertebrate taxa <br> <br>
 
 Forked from nesp_bugs: https://github.com/payalbal/nesp_bugs <br>
-NESP Threatened Species Recovery Hub Project 8.3.1: ‘Fire-affected invertebrates: priority species and management response’.
 
 
 ## Team
-Jess Marsh, Payal Bal, Hannah Fraser, Kate Umbers, Aaron Greenville, Libby Rumpff, John Woinarski <br> <br> <br>
+Jess Marsh, Payal Bal, Libby Rumpff, John Woinarski <br> <br> <br>
 
 
 ## Collaborators
-August Hao - data cleaning discussions and scripts <br>
-Lee Belbin, Matilda Stevenson – ALA data cleaning discussions and advice on ala4R <br>
-Casey Visitin – Collaborator on overlap script using gdal functions <br>
-Darren Southwell, Diego Brizuela Torres, David Wilkinson  – SDMs for priority invertebrates <br> <br> <br>
+<br> <br>
 
 
 ## Data
-https://zenodo.org/record/5091296#.ZD4bTxVBzao  <br> <br> <br>
+ <br> <br> <br>
 
 
 ## Contact author
@@ -57,6 +53,10 @@ payal.bal@unimelb.edu.au <br> <br> <br>
 
 11.	Region overlaps: https://github.com/payalbal/nesp_bugs/blob/master/scripts/species_regionoverlap.R <br>
   *	Region overlap function: https://github.com/payalbal/nesp_bugs/blob/master/scripts/region_overlap.R <br>
+
+
+
+
 
 12.	Prepare GEEBAM fire severity layer: https://github.com/payalbal/nesp_bugs/blob/master/scripts/firemap.R <br>
 

@@ -97,24 +97,24 @@ write.csv(region_names,
           file = file.path(output_dir, "state_names.csv"), 
           row.names = FALSE)
 
-## Clip regions to Preliminary analysis area
-## Note: See firmap.R for PAA processing
-infile <- outfile
-outfile <- gsub(".tif", "_paa.tif", outfile)
-maskfile <- file.path(output_dir, "fire", "prelim_analysis_areas_dissolve_eqar.shp") 
-
-system(paste0("gdalwarp -of GTiff -cutline ", maskfile, " -cl prelim_analysis_areas_dissolve_eqar -crop_to_cutline ", infile, " ", outfile))
-
-gdalinfo(outfile)
-sort(unique(raster(outfile)[]))
-region_classes <- sort(unique(na.omit(region_vals)))
-
-region_names <-   data.frame(matrix(nrow = length(region_classes), ncol = 2))
-names(region_names) <- c("code", "name")
-region_names$code <- region_classes
-region_names$name <- c('N/A', 'ACT', 'NSW', 'VIC', 
-                       'QLD', 'SA', 'TAS', 
-                       'WA', 'AET', 'JBT')
-write.csv(region_names, 
-          file = file.path(output_dir, "state_paa_names.csv"), 
-          row.names = FALSE)
+  # ## Clip regions to Preliminary analysis area
+  # ## Note: See firmap.R for PAA processing
+  # infile <- outfile
+  # outfile <- gsub(".tif", "_paa.tif", outfile)
+  # maskfile <- file.path(output_dir, "fire", "prelim_analysis_areas_dissolve_eqar.shp") 
+  # 
+  # system(paste0("gdalwarp -of GTiff -cutline ", maskfile, " -cl prelim_analysis_areas_dissolve_eqar -crop_to_cutline ", infile, " ", outfile))
+  # 
+  # gdalinfo(outfile)
+  # sort(unique(raster(outfile)[]))
+  # region_classes <- sort(unique(na.omit(region_vals)))
+  # 
+  # region_names <-   data.frame(matrix(nrow = length(region_classes), ncol = 2))
+  # names(region_names) <- c("code", "name")
+  # region_names$code <- region_classes
+  # region_names$name <- c('N/A', 'ACT', 'NSW', 'VIC', 
+  #                        'QLD', 'SA', 'TAS', 
+  #                        'WA', 'AET', 'JBT')
+  # write.csv(region_names, 
+  #           file = file.path(output_dir, "state_paa_names.csv"), 
+  #           row.names = FALSE)
